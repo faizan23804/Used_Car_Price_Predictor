@@ -12,6 +12,7 @@ This project predicts the **selling price of used cars** based on various featur
 - **Target Variable:** `selling_price`
 
 ### Sample Features
+
 - `car_name`  
 - `vehicle_age`  
 - `km_driven`  
@@ -30,6 +31,7 @@ This project predicts the **selling price of used cars** based on various featur
 - ✅ **K-Neighbors Regressor** (For comparison)
 
 Models are saved as:
+
 - `random_forest_regressor.pkl`
 - `k-neighbors_regressor.pkl`
 - `preprocessor.pkl` – ColumnTransformer (Ordinal Encoding + Standard Scaling)
@@ -59,15 +61,38 @@ Models are saved as:
 
 ## 💻 How to Run Locally
 
-### 1. Clone the Repository
+### ⚠️ Prerequisites
+
+- Python 3.8+
+- pip
+- Git
+- Web browser
+
+---
+
+### 🔧 Step-by-Step Instructions
+
 ```bash
-git clone https://github.com/your-username/Used_car_price_Prediction.git
-cd Used_car_price_Prediction
+# 1. Clone the repository
+git clone https://github.com/faizan23804/Used_Car_Price_Predictor.git
+cd Used_Car_Price_Predictor
 
+# 2. (Optional) Create a virtual environment
 python -m venv venv
-source venv/bin/activate  # on Windows: venv\Scripts\activate
+# Activate:
+# Windows:
+venv\Scripts\activate
+# Linux/macOS:
+source venv/bin/activate
 
+# 3. Install required libraries
 pip install -r requirements.txt
 
-python app.py
+# If requirements.txt doesn't exist, install manually:
+pip install flask scikit-learn pandas joblib
 
+# 4. Run the Flask app
+python application.py
+
+# 5. Open your browser and go to:
+http://127.0.0.1:5000
